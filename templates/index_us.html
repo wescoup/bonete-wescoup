@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonete-Wescoup Transportation & Delivery Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Bonete-Wescoup</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Reliable Transportation & Delivery Services</h2>
+            <p>Serving both US and Philippine markets with excellence</p>
+            <a href="services.html" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-box">
+            <h3>Fast Delivery</h3>
+            <p>Efficient and timely delivery services for all your needs.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Safe Transport</h3>
+            <p>Your goods handled with care and attention to detail.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Global Reach</h3>
+            <p>Operations in both the US and Philippines markets.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bonete-Wescoup</h3>
+                <p>Your trusted partner in transportation and delivery services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@bonete-wescoup.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bonete-Wescoup, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

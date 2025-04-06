@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}Bonete-Wescoup Philippines{% endblock %}
+
+{% block nav_home_active %}active{% endblock %}
+
+{% block body_class %}{% endblock %}
+
+{% block extra_css %}
+<style>
+    .language-switch {
+        /* Change from absolute positioning to being part of the header layout */
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: middle;
+    }
+    
+    .language-switch button {
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    
+    .language-switch button:hover {
+        background-color: #0055aa;
+    }
+    
+    /* Rest of your CSS remains the same */
+    .tagalog-content {
+        display: block;
+    }
+    
+    .english-content {
+        display: none;
+    }
+    
+    body.lang-en .tagalog-content {
+        display: none;
+    }
+    
+    body.lang-en .english-content {
+        display: block;
+    }
+    
+    /* Additional styles for proper header layout */
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <!-- Tagalog Content -->
+        <div class="tagalog-content">
+            <h2>Maaasahang Serbisyo sa Transportasyon at Delivery</h2>
+            <p>Naglilingkod sa Pilipinas nang may kahusayan</p>
+            <a href="{{ url_for('services') }}" class="btn">Tuklasin ang Aming mga Serbisyo</a>
+        </div>
+        
+        <!-- English Content -->
+        <div class="english-content">
+            <h2>Reliable Transportation & Delivery Services</h2>
+            <p>Serving the Philippines with excellence</p>
+            <a href="{{ url_for('services') }}" class="btn">Explore Our Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <!-- Tagalog Content -->
+    <div class="tagalog-content">
+        <div class="feature-box">
+            <h3>Mabilis na Delivery</h3>
+            <p>Mabilis at napapanahong serbisyo ng delivery para sa lahat ng iyong pangangailangan.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Ligtas na Transportasyon</h3>
+            <p>Ang iyong mga kagamitan ay aming hahawakan nang may pag-iingat at atensyon sa detalye.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Lokal na Serbisyo</h3>
+            <p>Nakatalaga sa paghahatid ng de-kalidad na serbisyo sa buong Pilipinas.</p>
+        </div>
+    </div>
+    
+    <!-- English Content -->
+    <div class="english-content">
+        <div class="feature-box">
+            <h3>Fast Delivery</h3>
+            <p>Efficient and timely delivery services for all your needs.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Safe Transport</h3>
+            <p>Your goods handled with care and attention to detail.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Local Service</h3>
+            <p>Dedicated to providing quality service throughout the Philippines.</p>
+        </div>
+    </div>
+</section>
+
+<section class="ph-specific">
+    <!-- Tagalog Content -->
+    <div class="tagalog-content">
+        <h2>Bakit Piliin ang Bonete-Wescoup?</h2>
+        <p>Bilang isang kumpanyang Pilipino, nauunawaan namin ang mga lokal na pangangailangan at kultura. Ang aming kaalaman sa lokal na lugar ay nagbibigay-daan sa amin na maghatid ng mabilis at epektibong serbisyo sa buong kapuluan.</p>
+        
+        <h3>Mga Lugar na Aming Sineserbisyuhan</h3>
+        <ul>
+            <li>Metro Manila</li>
+            <li>Caloocan</li>
+            <li>Bulacan</li>
+            <li>Laguna</li>
+            <li>Cavite</li>
+            <li>At marami pang iba!</li>
+        </ul>
+    </div>
+    
+    <!-- English Content -->
+    <div class="english-content">
+        <h2>Why Choose Bonete-Wescoup?</h2>
+        <p>As a Filipino company, we understand local needs and culture. Our knowledge of local areas allows us to deliver fast and efficient service throughout the archipelago.</p>
+        
+        <h3>Areas We Serve</h3>
+        <ul>
+            <li>Metro Manila</li>
+            <li>Caloocan</li>
+            <li>Bulacan</li>
+            <li>Laguna</li>
+            <li>Cavite</li>
+            <li>And many more!</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer_contact %}
+<!-- Tagalog Content -->
+<div class="tagalog-content">
+    <p>Email: ph@bonete-wescoup.com</p>
+    <p>Telepono: +63 2 8123 4567</p>
+    <p>Caloocan, Metro Manila</p>
+</div>
+
+<!-- English Content -->
+<div class="english-content">
+    <p>Email: ph@bonete-wescoup.com</p>
+    <p>Phone: +63 2 8123 4567</p>
+    <p>Caloocan, Metro Manila</p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function toggleLanguage() {
+        const body = document.body;
+        const button = document.getElementById('langToggle');
+        
+        if (body.classList.contains('lang-en')) {
+            // Switch to Tagalog
+            body.classList.remove('lang-en');
+            button.textContent = 'English';
+            localStorage.setItem('lang', 'tl');
+        } else {
+            // Switch to English
+            body.classList.add('lang-en');
+            button.textContent = 'Tagalog';
+            localStorage.setItem('lang', 'en');
+        }
+    }
+    
+    // Check if language preference is saved
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang === 'en') {
+            document.body.classList.add('lang-en');
+            document.getElementById('langToggle').textContent = 'Tagalog';
+        }
+    });
+</script>
+{% endblock %}
+
+{% block language_switch %}
+<div class="language-switch">
+    <button onclick="toggleLanguage()" id="langToggle">English</button>
+</div>
+{% endblock %}

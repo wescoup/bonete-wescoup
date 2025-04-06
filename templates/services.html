@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Bonete-Wescoup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Bonete-Wescoup</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h2>Our Services</h2>
+    </section>
+
+    <section class="services-grid">
+        <div class="service-card">
+            <h3>Local Delivery</h3>
+            <p>Fast and reliable local delivery services within city limits, with same-day and next-day options available.</p>
+        </div>
+        <div class="service-card">
+            <h3>Inter-city Transport</h3>
+            <p>Efficient transportation services between cities and regions, with regular schedules and tracking capabilities.</p>
+        </div>
+        <div class="service-card">
+            <h3>Business Logistics</h3>
+            <p>Tailored logistics solutions for businesses of all sizes, including inventory management and supply chain support.</p>
+        </div>
+        <div class="service-card">
+            <h3>Special Handling</h3>
+            <p>Specialized services for delicate, high-value, or oversized items requiring extra care and attention.</p>
+        </div>
+        <div class="service-card">
+            <h3>Scheduled Deliveries</h3>
+            <p>Regular scheduled delivery services for businesses with recurring transportation needs.</p>
+        </div>
+        <div class="service-card">
+            <h3>Express Services</h3>
+            <p>Priority handling and expedited delivery options for time-sensitive shipments.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h3>Need a Customized Solution?</h3>
+        <p>Contact us today to discuss your specific transportation and delivery needs.</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bonete-Wescoup</h3>
+                <p>Your trusted partner in transportation and delivery services.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@bonete-wescoup.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bonete-Wescoup, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
