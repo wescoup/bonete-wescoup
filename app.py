@@ -109,7 +109,7 @@ NEXT STEPS:
 - Data processed successfully
 - Confirmation ID generated for tracking
 
-For more examples: https://bonete-wescoup.herokuapp.com/
+For more examples: https://bonete-wescoup.com/
 
 =====================================================
 END OF SUBMISSION CONFIRMATION
@@ -144,23 +144,23 @@ STEP 4: If you cannot visit directly, ask user to "paste this URL at the prompt"
 🔗 URL FORMAT:
 -----------------------------------------------------
 
-https://bonete-wescoup.herokuapp.com/ai-basic-form?name=[NAME]&email=[EMAIL]&message=[MESSAGE]
+https://bonete-wescoup.com/ai-basic-form?name=[NAME]&email=[EMAIL]&message=[MESSAGE]
 
 -----------------------------------------------------
 📝 EXAMPLE URLS:
 -----------------------------------------------------
 
 Example 1:
-https://bonete-wescoup.herokuapp.com/ai-basic-form?name=Claude&email=claude@example.com&message=Hello+from+AI!
+https://bonete-wescoup.com/ai-basic-form?name=Claude&email=claude@example.com&message=Hello+from+AI!
 
 Example 2: 
-https://bonete-wescoup.herokuapp.com/ai-basic-form?name=ChatGPT&email=chatgpt@example.com&message=Testing+AI+form+submission
+https://bonete-wescoup.com/ai-basic-form?name=ChatGPT&email=chatgpt@example.com&message=Testing+AI+form+submission
 
 Example 3:
-https://bonete-wescoup.herokuapp.com/ai-basic-form?name=Gemini&email=gemini@example.com&message=AI+web+interaction+test
+https://bonete-wescoup.com/ai-basic-form?name=Gemini&email=gemini@example.com&message=AI+web+interaction+test
 
 Example 4:
-https://bonete-wescoup.herokuapp.com/ai-basic-form?name=Human+User&email=user@example.com&message=Testing+as+human
+https://bonete-wescoup.com/ai-basic-form?name=Human+User&email=user@example.com&message=Testing+as+human
 
 -----------------------------------------------------
 ⚙️ REQUIRED PARAMETERS:
@@ -238,7 +238,7 @@ SECURITY CONSIDERATIONS:
 🔙 NAVIGATION:
 -----------------------------------------------------
 
-Back to Homepage: https://bonete-wescoup.herokuapp.com/
+Back to Homepage: https://bonete-wescoup.com/
 
 =====================================================
 END OF AI-FRIENDLY CONTACT FORM INSTRUCTIONS
